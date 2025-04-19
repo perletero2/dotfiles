@@ -116,3 +116,5 @@ alias c='clear'
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval $(thefuck --alias)
+eval $(thefuck --alias fuck)
