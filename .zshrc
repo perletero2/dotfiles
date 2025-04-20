@@ -1,16 +1,18 @@
+# ------ Zsh Start ------
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Set name of the theme to load
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="catppuccin"
 CATPPUCCIN_FLAVOR="macchiato" # Required! Options: mocha, flappe, macchiato, latte
 
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
+# --- History ---
 
-# History
 HIST_STAMPS="dd.mm.yyyy"
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -24,29 +26,34 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Completion styling
+
+# Completion styling ? # dunno if still usefull with all the plugins and themes, to be examined
+
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
+zstyle ':completion:*' menu select=>2 interactive search
 
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# ------ Plugins ------
+
+
 plugins=(git archlinux autojump sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+
+# ------ User configuration ------
 
 
 # --- BAT ---
 
 export BAT_THEME=CatppuccinMacchiato
 
+
 # --- Eza (better ls) ---
 
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+
 
 # --- FZF ---
 
@@ -71,7 +78,8 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-# -- FZF Preview --
+
+# --- FZF Preview ---
 
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
@@ -81,6 +89,7 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 # Advanced customization of fzf options via _fzf_comprun function
 # - The first argument to the function is the name of the command.
 # - You should make sure to pass the rest of the arguments to fzf.
+
 _fzf_comprun() {
   local command=$1
   shift
@@ -93,7 +102,9 @@ _fzf_comprun() {
   esac
 }
 
-# -- FZF Theme --
+
+# --- FZF Theme ---
+#Capuccin Machiato whithout background
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#363a4f,spinner:#f4dbd6,hl:#ed8796 \
@@ -103,10 +114,13 @@ export FZF_DEFAULT_OPTS=" \
 --color=border:#363a4f,label:#cad3f5"
 
 
-# Aliases
+
+# ------ Aliases ------
+
 alias vim='nvim'
 alias c='clear'
 alias z='zellij'
+
 
 [[ -s /home/olivier/.autojump/etc/profile.d/autojump.sh ]] && source /home/olivier/.autojump/etc/profile.d/autojump.sh
 
@@ -114,7 +128,8 @@ alias z='zellij'
 
 
 
-# Shell integrations
+# ------ Shell integrations ------
+
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
