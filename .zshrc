@@ -105,6 +105,7 @@ export FZF_DEFAULT_OPTS=" \
 # Aliases
 alias vim='nvim'
 alias c='clear'
+alias z='zellij'
 
 [[ -s /home/olivier/.autojump/etc/profile.d/autojump.sh ]] && source /home/olivier/.autojump/etc/profile.d/autojump.sh
 
