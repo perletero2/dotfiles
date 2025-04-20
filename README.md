@@ -3,6 +3,7 @@
 ### Required
 
 -git
+
 -stow
 
 
@@ -10,22 +11,36 @@
 
 ### Zsh Plugins
 -git 
+
 -archlinux 
+
 -autojump 
+
 -sudo 
+
 -zsh-interactive-cd 
+
 -zsh-autosuggestions 
+
 -you-should-use 
+
 -zsh-syntax-highlighting
+
 
 ### Additional 
 
 -FZF
+
 -Bat
+
 -Eza
+
 -Zoxide
+
 -Starship
+
 -Thefuck
+
 -Zellij
 
 
@@ -34,5 +49,7 @@
 -Catpuccin Macchiato
 
 
-Stow tutorial in case this idiot(me) forget : 
+
+
+Stow tutorial in case this idiot(me) forgets : 
 https://www.youtube.com/watch?v=y6XCebnB9gs
