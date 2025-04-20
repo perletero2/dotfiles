@@ -44,8 +44,5 @@
 - [ ] Dotfiles cleaning
 - [ ] Add needed manpages/guides
 
-
-
-
 Stow tutorial in case this idiot(me) forgets :  
 https://www.youtube.com/watch?v=y6XCebnB9gs
