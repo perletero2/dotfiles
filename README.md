@@ -38,6 +38,7 @@
 
 ## ToDo
 
+- [ ] Set up NVim
 - [ ] Try PL10k
 - [ ] Add Zellij layouts
 - [ ] Add remaining dotfiles
