@@ -38,6 +38,7 @@
 
 ## ToDo
 
+- [ ] Add nVim config/lua files
 - [ ] Try PL10k
 - [ ] Add Zellij layouts
 - [ ] Add remaining dotfiles
