@@ -117,7 +117,7 @@ export FZF_DEFAULT_OPTS=" \
 
 # ------ Aliases ------
 
-alias vim='nvim'
+alias nv='nvim'
 alias c='clear'
 alias z='zellij'
 

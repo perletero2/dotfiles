@@ -21,6 +21,7 @@
 
 ### Additional 
 
+- [x] Nvim/NvChad
 - [x] FZF  
 - [x] Bat  
 - [x] Eza  
@@ -28,7 +29,6 @@
 - [x] Starship  
 - [x] Thefuck  
 - [x] Zellij  
-
 
 ### Themes
 
@@ -38,7 +38,6 @@
 
 ## ToDo
 
-- [ ] Set up NVim
 - [ ] Try PL10k
 - [ ] Add Zellij layouts
 - [ ] Add remaining dotfiles
