@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # ------ Zsh Start ------
 
 # Path to your Oh My Zsh installation.
@@ -7,8 +14,8 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Set name of the theme to load
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="catppuccin"
-CATPPUCCIN_FLAVOR="macchiato" # Required! Options: mocha, flappe, macchiato, latte
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# CATPPUCCIN_FLAVOR="macchiato" # Required! Options: mocha, flappe, macchiato, latte
 
 
 # --- History ---
@@ -131,7 +138,9 @@ alias z='zellij'
 # ------ Shell integrations ------
 
 eval "$(fzf --zsh)"
-eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval $(thefuck --alias)
 eval $(thefuck --alias fuck)
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
