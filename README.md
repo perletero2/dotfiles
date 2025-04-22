@@ -26,7 +26,7 @@
 - [x] Bat  
 - [x] Eza  
 - [x] Zoxide  
-- [x] Starship  
+- [x] Powerlevel10k  #Starship config available if i want to switch  
 - [x] Thefuck  
 - [x] Zellij  
 
@@ -39,7 +39,6 @@
 ## ToDo
 
 - [ ] Add nVim config/lua files
-- [ ] Try PL10k
 - [ ] Add Zellij layouts
 - [ ] Add remaining dotfiles
 - [ ] Dotfiles cleaning
@@ -49,6 +48,5 @@
 ## Tutorials/Guides:
 ### In case this idiot(me) forgets
 
--Stow:  
-https://www.youtube.com/watch?v=y6XCebnB9gs
+-ToDo
 
