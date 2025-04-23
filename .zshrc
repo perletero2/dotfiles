@@ -6,7 +6,7 @@ fi
 
 # ------ Zsh Start ------
 
-# Path to your Oh My Zsh installation.
+# Path to Oh-My-Zsh
 
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
@@ -73,7 +73,6 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-
 # --- FZF Preview ---
 
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
@@ -97,7 +96,6 @@ _fzf_comprun() {
   esac
 }
 
-
 # --- FZF Theme ---
 # Catpuccin Machiato whithout background
 
@@ -107,7 +105,6 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#b7bdf8,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796 \
 --color=selected-bg:#494d64 \
 --color=border:#363a4f,label:#cad3f5"
-
 
 # ------ Aliases ------
 
