@@ -1,6 +1,5 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -8,17 +7,22 @@ fi
 # ------ Zsh Start ------
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
+export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Set name of the theme to load
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
-# CATPPUCCIN_FLAVOR="macchiato" # Required! Options: mocha, flappe, macchiato, latte
 
+# ------Load Modules ------
 
-# --- History ---
+plugins=(git archlinux autojump sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+source <(fzf --zsh)
+autoload -U compinit && compinit -u
+
+# ------ History ------
 
 HIST_STAMPS="dd.mm.yyyy"
 HISTSIZE=5000
@@ -33,49 +37,33 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-
-# Completion styling ? # dunno if still usefull with all the plugins and themes, to be examined
+# ------ Completion styling ------ 
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 
-
-# ------ Plugins ------
-
-
-plugins=(git archlinux autojump sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-
-
-# ------ User configuration ------
+# ------ Modules configuration ------
 
 
 # --- BAT ---
 
 export BAT_THEME=CatppuccinMacchiato
 
-
 # --- Eza (better ls) ---
 
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
-
 # --- FZF ---
 
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
-# -- Use fd instead of fzf --
+# - Use fd instead of fzf -
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
-# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# Use fd for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
   fd --hidden --exclude .git . "$1"
 }
@@ -111,7 +99,7 @@ _fzf_comprun() {
 
 
 # --- FZF Theme ---
-#Capuccin Machiato whithout background
+# Catpuccin Machiato whithout background
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#363a4f,spinner:#f4dbd6,hl:#ed8796 \
@@ -121,21 +109,24 @@ export FZF_DEFAULT_OPTS=" \
 --color=border:#363a4f,label:#cad3f5"
 
 
-
 # ------ Aliases ------
 
 alias nv='nvim'
 alias c='clear'
 alias z='zellij'
 
+# ------ Exports ------
 
-[[ -s /home/olivier/.autojump/etc/profile.d/autojump.sh ]] && source /home/olivier/.autojump/etc/profile.d/autojump.sh
 
-        autoload -U compinit && compinit -u
-
+export EDITOR='nvim'
+export BROWSER='firefox'
+export XDG_CONFIG_HOME='$HOME/.config'
+export XDG_DATA_HOME='$HOME/.local/share'
+export XDG_CACHE_HOME='$HOME/.cache'
 
 
 # ------ Shell integrations ------
+
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
