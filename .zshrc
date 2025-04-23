@@ -22,6 +22,12 @@ source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
 autoload -U compinit && compinit -u
 
+# ------ Completion styling ------ 
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+
 # ------ History ------
 
 HIST_STAMPS="dd.mm.yyyy"
@@ -37,11 +43,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# ------ Completion styling ------ 
-
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
 
 # ------ Modules configuration ------
 
@@ -114,16 +115,10 @@ alias z='zellij'
 
 # ------ Exports ------
 
-
 export EDITOR='nvim'
 export BROWSER='firefox'
-export XDG_CONFIG_HOME='$HOME/.config'
-export XDG_DATA_HOME='$HOME/.local/share'
-export XDG_CACHE_HOME='$HOME/.cache'
-
 
 # ------ Shell integrations ------
-
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"

@@ -21,7 +21,7 @@
 
 ### Additional 
 
-- [x] Nvim/NvChad
+- [x] Nvim/NvChad #Use NvChad if lazy
 - [x] FZF  
 - [x] Bat  
 - [x] Eza  
