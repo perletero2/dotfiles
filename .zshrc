@@ -6,21 +6,8 @@ fi
 
 # ------ Zsh Start ------
 
-# Path to Oh-My-Zsh
-
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Set name of the theme to load
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# ------Load Modules ------
-
-plugins=(git archlinux autojump sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
-source $ZSH/oh-my-zsh.sh
-source <(fzf --zsh)
-autoload -U compinit && compinit -u
 
 # ------ Completion styling ------ 
 
@@ -28,6 +15,17 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
+
+# ------ Theme ------ 
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# ------Load Modules ------
+
+plugins=(git archlinux copypath rsync autojump sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+source <(fzf --zsh)
+autoload -U compinit && compinit -u
 
 # ------ History ------
 
