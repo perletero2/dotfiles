@@ -111,6 +111,7 @@ export FZF_DEFAULT_OPTS=" \
 alias nv='nvim'
 alias c='clear'
 alias z='zellij'
+alias bat='bat -n --color=always'
 
 # ------ Exports ------
 
