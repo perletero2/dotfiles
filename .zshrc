@@ -42,7 +42,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-
 # ------ Modules configuration ------
 
 
@@ -112,6 +111,8 @@ alias nv='nvim'
 alias c='clear'
 alias z='zellij'
 alias bat='bat -n --color=always'
+alias rg='rg -S'
+alias fman='compgen -c | fzf | xargs man'
 
 # ------ Exports ------
 
