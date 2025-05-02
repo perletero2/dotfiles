@@ -18,17 +18,17 @@
 - [x] you-should-use  
 - [x] zsh-syntax-highlighting  
 
-
 ### Additional 
 
-- [x] Nvim/NvChad #Use NvChad if lazy
+- [x] Nvim/NvChad # - Use NvChad if lazy
 - [x] FZF  
 - [x] Bat  
 - [x] Eza  
 - [x] Zoxide  
-- [x] Powerlevel10k  #Starship config available if i want to switch  
+- [x] Powerlevel10k # - Starship config available if i want to switch  
 - [x] Thefuck  
-- [x] Zellij  
+- [x] Tmux 
+- [x] Zellij # - Used over Tmux for specific cases
 
 ### Themes
 

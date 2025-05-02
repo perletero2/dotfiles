@@ -110,6 +110,7 @@ export FZF_DEFAULT_OPTS=" \
 alias nv='nvim'
 alias c='clear'
 alias z='zellij'
+alias t='tmux'
 alias bat='bat -n --color=always'
 alias rg='rg -S'
 alias fman='compgen -c | fzf | xargs man'
