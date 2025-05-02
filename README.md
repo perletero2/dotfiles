@@ -17,6 +17,8 @@
 - [x] zsh-autosuggestions  
 - [x] you-should-use  
 - [x] zsh-syntax-highlighting  
+- [x] copypath
+- [x] rsync
 
 ### Additional 
 
@@ -25,6 +27,7 @@
 - [x] Bat  
 - [x] Eza  
 - [x] Zoxide  
+- [x] Ripgrep
 - [x] Powerlevel10k #Starship config available if i want to switch  
 - [x] Thefuck  
 - [x] Tmux 
@@ -32,9 +35,8 @@
 
 ### Themes
 
-- [x] Catpuccin Macchiato  
-
-
+- [x] Otto #General DE/Shell Theme
+- [x] Catpuccin Macchiato  #Tweaked for prompt/status bar/nvim only
 
 ## ToDo
 
