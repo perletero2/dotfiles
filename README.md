@@ -45,7 +45,7 @@
 - [ ] Add remaining dotfiles
 - [ ] Dotfiles cleaning
 - [ ] Add needed manpages/guides
-
+- [ ] Bash script for autoinstall
 
 ## Tutorials/Guides:
 ### In case this idiot(me) forgets
