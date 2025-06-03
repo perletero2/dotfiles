@@ -114,6 +114,7 @@ alias t='tmux'
 alias bat='bat -n --color=always'
 alias rg='rg -S'
 alias fman='compgen -c | fzf | xargs man'
+alias py='python3'
 
 # ------ Exports ------
 
