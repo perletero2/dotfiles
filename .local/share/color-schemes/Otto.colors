@@ -96,6 +96,7 @@ ForegroundVisited=127,140,141
 [General]
 ColorScheme=Otto
 Name=Otto
+TitlebarIsAccentColored=false
 shadeSortColumn=true
 
 [KDE]

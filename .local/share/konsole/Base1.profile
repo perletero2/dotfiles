@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Scratchy
+ColorScheme=Layan
 Font=JetBrainsMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Cursor Options]
@@ -9,3 +9,6 @@ CursorShape=1
 Name=Base1
 Parent=FALLBACK/
 SemanticInputClick=true
+
+[Scrolling]
+ScrollBarPosition=1
