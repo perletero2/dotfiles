@@ -5,6 +5,9 @@
 - [x] git  
 - [x] stow  
 
+### Optional
+
+- [x] Kitty   
 
 ## ZSH Requirements
 
@@ -30,13 +33,15 @@
 - [x] Ripgrep
 - [x] Powerlevel10k #Starship config available if i want to switch  
 - [x] Thefuck  
-- [x] Tmux 
+- [x] Tmux #Used for specific persistence until proper kitty config
 - [x] Zellij #Used over Tmux for specific cases
 
 ### Themes
 
 - [x] Otto #General DE/Shell Theme
 - [x] Catpuccin Macchiato  #Tweaked for prompt/status bar/nvim only
+- [x] Layan for Glass Theme
+- [x] Kvantum/Klassy  for transparency
 
 ## ToDo
 
