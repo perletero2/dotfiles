@@ -8,6 +8,7 @@
 ### Optional
 
 - [x] Kitty   
+- [x] Nvim/NvChad #Use [NvChad](https://nvchad.com/docs/quickstart/install) if lazy or [Snacks](https://github.com/folke/snacks.nvim) if not
 
 ## ZSH Requirements
 
@@ -25,7 +26,6 @@
 
 ### Additional 
 
-- [x] Nvim/NvChad #Use NvChad if lazy
 - [x] FZF  
 - [x] Bat  
 - [x] Eza  
@@ -38,22 +38,24 @@
 
 ### Themes
 
-- [x] Otto #General DE/Shell Theme
-- [x] Catpuccin Macchiato  #Tweaked for prompt/status bar/nvim only
-- [x] Layan for Glass Theme
-- [x] Kvantum/Klassy  for transparency
+- [x] Catpuccin Macchiato  
+- [x] KDE_Rounded_Corners  
+- [x] Kvantum/Klassy  
+- [x] Panel Coloriser
+- [x] Krohnkite
 
 ## ToDo
 
 - [ ] Add nVim config/lua files
 - [ ] Add Zellij layouts
 - [ ] Add remaining dotfiles
+- [ ] Add KDE settings ? #Using [Transfuse](https://gitlab.com/cscs/transfuse)
 - [ ] Dotfiles cleaning
 - [ ] Add needed manpages/guides
-- [ ] Bash script for autoinstall
+- [ ] Make a better script for install ?
 
 ## Tutorials/Guides:
 ### In case this idiot(me) forgets
 
--ToDo
+- [ ] ToDo
 
