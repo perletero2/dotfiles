@@ -23,7 +23,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # ------Load Modules ------
 
-plugins=(git archlinux copypath rsync autojump sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
+plugins=(git copypath rsync autojump sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
 autoload -U compinit && compinit -u
@@ -116,6 +116,7 @@ alias bat='bat -n --color=always'
 alias rg='rg -S'
 alias fman='compgen -c | fzf | xargs man'
 alias py='python3'
+alias fastfetch='clear && fastfetch'
 
 # ------ Exports ------
 
@@ -129,5 +130,14 @@ eval "$(zoxide init --cmd cd zsh)"
 eval $(thefuck --alias)
 eval $(thefuck --alias fuck)
 
+# pnpm
+export PNPM_HOME="/home/olivier/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
