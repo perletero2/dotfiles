@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+set -euo pipefail
+
 # --- Check dependencies ----
 
 REQUIRED_PKGS=("git" "stow")
@@ -12,18 +14,21 @@ for pkg in "${REQUIRED_PKGS[@]}"; do
 done
 
 if [ ${#missing[@]} -gt 0 ]; then
-    echo "Error: The following required packages are missing: ${missing[*]}"
+    echo "The following required packages are missing: ${missing[*]}"
     echo "Installing..."
-    sudo pacman -Syu --needed ${missing[*]}
-    exit 1
+    sudo pacman -S ${missing[*]}
 fi
 
 # - Create folder and clone repo -
 
-mkdir -p ~/dotfiles && cd ~/dotfiles
+if [ ! -d ~/dotfiles ]; then
+  mkdir -p ~/dotfiles  
+fi
+cd ~/dotfiles
 git clone https://github.com/perletero2/dotfiles.git
 
 # - Stow dotfiles (duh!) -
 
 stow .
 echo "Done !"
+
