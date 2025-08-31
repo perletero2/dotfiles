@@ -21,6 +21,7 @@ fi
 
 # - Create folder and clone repo -
 
+cd ~/
 git clone https://github.com/perletero2/dotfiles.git
 
 # - Stow dotfiles (duh!) -
