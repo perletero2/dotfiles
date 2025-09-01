@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+dir="~/dotfiles"
+
 # --- Check dependencies ----
 
 REQUIRED_PKGS=("git" "stow")
@@ -19,14 +21,47 @@ if [ ${#missing[@]} -gt 0 ]; then
     sudo pacman -S --noconfirm ${missing[*]}
 fi
 
-# - Create folder and clone repo -
+# --- Check if repo is already present else retrieve it ---
 
-cd ~/
-git clone https://github.com/perletero2/dotfiles.git
+if [[ ! -d "$dir" ]] ; then
+  mkdir -p $dir
+fi
 
-# - Stow dotfiles (duh!) -
+cd $dir
 
-cd ~/dotfiles
-stow .
+updateRepo() {
+  local repo_url=$(git config --get remote.origin.url)
+  local remote_url="https://github.com/perletero2/dotfiles.git"
+
+  echo "***************************************************************"
+  echo "Updating Dotfiles"
+
+  if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" != "true" ] ; then
+      echo "Cloning repo..."
+      git init
+      git remote set-url origin "$remote_url"
+      git pull origin main
+    
+    elif [ "$repo_url" == "$remote_url" ] ; then
+      echo "Updating repo..."
+      git fetch --all && git stash
+      git rebase origin/main
+      git stash pop
+  
+    elif [ "$repo_url" != "$remote_url" ] ; then
+      echo "Correcting repo..."
+      git remote set-url origin "$remote_url"
+      git fetch --all && git stash
+      git rebase origin/main
+      git stash pop
+  fi
+}
+
+updateRepo || exit 2
+
+# --- Stow dotfiles (duh!) ---
+
+echo "Stowing files..."
+stow . --adopt
 echo "Done !"
 
