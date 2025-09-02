@@ -61,6 +61,6 @@ updateRepo || { echo "Crappy function, go back to learning you dumbass"; exit 2;
 # --- Stow dotfiles (duh!) ---
 
 echo "Stowing files..."
-stow . --adopt || { echo "Failed to stow dotfiles"; exit 1; }
+stow . || { echo "Failed to stow dotfiles"; exit 1; }
 echo "Done !"
 
