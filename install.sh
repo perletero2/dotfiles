@@ -36,17 +36,20 @@ updateRepo() {
   echo "***************************************************************"
   echo "Updating Dotfiles"
 
-  if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" != "true" ]; then # Check if current dir is a git repo, if not create it and pull from source
+      # Check if current dir is a git repo, if not create it and pull from source
+  if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" != "true" ]; then 
       echo "Cloning repo..."
       git init || { echo "Failed to initialize git repository in $dir"; exit 1; }
       git remote add origin "$remote_url" || { echo "Failed to set remote url for $dir"; exit 1; }
       git pull origin main || { echo "Failed to pull updates from the remote repo"; exit 1; }
     
-    elif [ "$repo_url" == "$remote_url" ] ; then # If it is correct repo, update it.
+      # If it is correct repo, update it.
+    elif [ "$repo_url" == "$remote_url" ] ; then 
       echo "Updating repo..."
       git pull origin main || { echo "Failed to pull updates from the remote repo"; exit 1; } 
-  
-    elif [ "$repo_url" != "$remote_url" ] ; then # If not, correct the source and update.
+
+      # If not, correct the source and update.
+    elif [ "$repo_url" != "$remote_url" ] ; then 
       echo "Correcting repo..."
       git remote set-url origin "$remote_url" || { echo "Failed to set remote url for $dir"; exit 1; }
       git fetch --all || { echo "Failed to fetch from source"; exit 1; }
