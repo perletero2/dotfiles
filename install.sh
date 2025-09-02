@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-dir="$HOME/test"
+dir="$HOME/dotfiles"
 
 # --- Check dependencies ----
 
