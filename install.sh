@@ -21,7 +21,7 @@ done
 if [ ${#missing[@]} -gt 0 ]; then
     echo -e "${GREEN}The following required packages are missing: ${missing[*]} ${NC}"
     echo -e "${GREEN}Installing...${NC}"
-    sudo pacman -S --noconfirm "${missing[@]}" || { echo -e "${RED}Failed to install missing packages${NC}"; exit 1; }
+    sudo pacman -Syu --noconfirm "${missing[@]}" || { echo -e "${RED}Failed to install missing packages${NC}"; exit 1; }
 fi
 
 # --- Check if repo is already present else retrieve it ---
