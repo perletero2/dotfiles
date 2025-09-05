@@ -8,7 +8,6 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-export PF_SOURCE="${HOME}/.config/pfetch/pfetchrc" # pfetch config
 
 # ------ Completion styling ------ 
 
@@ -23,7 +22,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # ------Load Modules ------
 
-plugins=(git copypath rsync autojump dotbare sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
+plugins=(git copypath rsync autojump dotbare fuzzy-sys sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 _dotbare_completion_cmd
 source <(fzf --zsh)
@@ -45,7 +44,6 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # ------ Modules configuration ------
-
 
 # --- BAT ---
 
@@ -116,6 +114,7 @@ alias fman='compgen -c | fzf | xargs batman'
 alias py='python3'
 alias fastfetch='clear && fastfetch'
 alias fkill='ps -ef | fzf | awk '{print $2}' | xargs kill -9'
+alias fsys='fuzzy-sys'
 
 # ------ Exports ------
 
@@ -124,7 +123,7 @@ export BROWSER='firefox'
 
 # ------ Shell integrations ------
 
-eval "$(fzf --zsh)"
+eval "$(fzf --zsh)" #CTRL-T = FZF Select | CTRL-R = FZF History | ALT-C = FZF cd
 eval "$(zoxide init --cmd cd zsh)"
 eval $(thefuck --alias)
 eval $(thefuck --alias fuck)

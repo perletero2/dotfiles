@@ -22,6 +22,8 @@
 - [x] zsh-syntax-highlighting  
 - [x] copypath
 - [x] rsync
+- [x] dotbare
+- [x] fuzzy-sys
 
 ### Additional 
 
@@ -33,13 +35,14 @@
 - [x] Powerlevel10k 
 - [x] Thefuck  
 
-### Themes
+### Theme
 
-- [x] Catpuccin Macchiato  
-- [x] KDE_Rounded_Corners  
-- [x] Kvantum
-- [x] Panel Coloriser
-- [x] Krohnkite
+- [x] [Catpuccin Macchiato](https://catppuccin.com/ports/)  
+- [x] [KWin_Effects_Forceblur](https://github.com/taj-ny/kwin-effects-forceblur)
+- [x] [KDE_Rounded_Corners](https://github.com/matinlotfali/KDE-Rounded-Corners)  
+- [x] [Kvantum](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
+- [x] [Panel Coloriser](https://github.com/luisbocanegra/plasma-panel-colorizer)
+- [x] [Krohnkite](https://github.com/esjeon/krohnkite)
 
 ## ToDo
 
