@@ -35,7 +35,7 @@
 - [x] Powerlevel10k 
 - [x] Thefuck  
 
-### Theme
+## Theme
 
 - [x] [Catpuccin Macchiato](https://catppuccin.com/ports/)  
 - [x] [KWin_Effects_Forceblur](https://github.com/taj-ny/kwin-effects-forceblur)
