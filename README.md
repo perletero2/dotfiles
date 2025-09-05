@@ -46,6 +46,7 @@
 
 ## ToDo
 
+- [ ] Add custom Plasma theme
 - [ ] Add nVim config/lua files
 - [ ] Add remaining dotfiles
 - [ ] Add KDE settings ? #Using [Transfuse](https://gitlab.com/cscs/transfuse)
