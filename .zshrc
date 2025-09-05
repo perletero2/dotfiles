@@ -23,8 +23,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # ------Load Modules ------
 
-plugins=(git copypath rsync autojump sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
+plugins=(git copypath rsync autojump dotbare sudo zsh-interactive-cd zsh-autosuggestions you-should-use zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+_dotbare_completion_cmd
 source <(fzf --zsh)
 autoload -U compinit && compinit -u
 
@@ -106,17 +107,21 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#494D64 \
 --color=border:#363A4F,label:#CAD3F5"
 
+# --- Dotbare ---
+
+export DOTBARE_DIR="$HOME/dotfiles/.git/"
+export DOTBARE_TREE="$HOME/dotfiles/"
+
 # ------ Aliases ------
 
 alias nv='nvim'
 alias c='clear'
-alias z='zellij'
-alias t='tmux'
 alias bat='bat -n --color=always'
 alias rg='rg -S'
-alias fman='compgen -c | fzf | xargs man'
+alias fman='compgen -c | fzf | xargs batman'
 alias py='python3'
 alias fastfetch='clear && fastfetch'
+alias fkill='ps -ef | fzf | awk '{print $2}' | xargs kill -9'
 
 # ------ Exports ------
 
