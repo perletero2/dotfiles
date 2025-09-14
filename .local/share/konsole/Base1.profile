@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=catppuccin-macchiato
+ColorScheme=MaterialYou
 Font=JetBrainsMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Cursor Options]
@@ -12,3 +12,4 @@ SemanticInputClick=true
 
 [Scrolling]
 ScrollBarPosition=1
+

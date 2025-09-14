@@ -4,5 +4,6 @@
 --color=selected-bg:#494D64
 --color=border:#363A4F,label:#CAD3F5
 --color=gutter:#24273A
---border=rounded --prompt="> "
---marker=">" --pointer="●"
+--border=rounded 
+--prompt="> "
+--marker=">" --pointer="◆"

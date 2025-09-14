@@ -139,3 +139,6 @@ esac
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# Created by `pipx` on 2025-09-11 03:04:19
+export PATH="$PATH:/home/olivier/.local/bin"
