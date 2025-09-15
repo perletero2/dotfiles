@@ -13,6 +13,15 @@ UpdateKitty() {
     fi
 }
 
+# - Update RMPC -
+
+UpdateRMPC() {
+   RPID=$(pgrep "rmpc")
+    if [ "$RPID" -ne "0" ]; then
+        rmpc remote set theme ~/.config/rmpc/themes/rmpc.ron
+    fi
+}
+
 # - Update Cava -
 
 UpdateCava() {
@@ -22,13 +31,8 @@ UpdateCava() {
     fi
 }
 
-
-# - Update Firefox with Pywalfox -
-UpdateFirefox() {
-  pywalfox update
-}
-
+  
 # --- Execute Functions ---
 UpdateKitty
 UpdateCava
-#UpdateFirefox # Not needed if messager installed
+UpdateRMPC
