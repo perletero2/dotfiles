@@ -18,7 +18,7 @@ UpdateKitty() {
 UpdateRMPC() {
    RPID=$(pgrep "rmpc")
     if [ "$RPID" -ne "0" ]; then
-        rmpc remote set theme ~/.config/rmpc/themes/rmpc.ron
+        rmpc remote set theme "~/.cache/wal/rmpc.ron"
     fi
 }
 
